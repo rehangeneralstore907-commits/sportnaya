@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>MAX ENTERPRISES · Udyam Registered</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+
+        body {
+            background: #f4f7fc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .card {
+            max-width: 1100px;
+            width: 100%;
+            background: white;
+            border-radius: 32px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08), 0 8px 24px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2.2rem;
+            transition: 0.3s;
+        }
+
+        /* ----- HEADER : LOGO + TITLE ----- */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem 1.5rem;
+            border-bottom: 2px solid #eef2f6;
+            padding-bottom: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-icon {
+            background: #0b2b4f;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            box-shadow: 0 4px 12px rgba(11, 43, 79, 0.15);
+        }
+
+        .logo-text h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #0b1e33;
+            letter-spacing: -0.3px;
+        }
+
+        .logo-text .tagline {
+            font-size: 0.9rem;
+            color: #1e4f8a;
+            background: #e6f0ff;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-top: 4px;
+            font-weight: 500;
+        }
+
+        .badge-udyam {
+            background: #f0f7e9;
+            color: #2b6b1e;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 0.5rem 1.4rem;
+            border-radius: 40px;
+            border: 1px solid #cde0c4;
+            white-space: nowrap;
+        }
+
+        .badge-udyam i {
+            margin-right: 6px;
+            color: #3b8c2a;
+        }
+
+        /* ----- GRID DETAILS ----- */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem 2rem;
+        }
+
+        .detail-item {
+            border-bottom: 1px solid #edf2f7;
+            padding: 0.8rem 0 0.6rem;
+        }
+
+        .detail-item .label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        .detail-item .value {
+            font-size: 1.05rem;
+            font-weight: 500;
+            color: #0b1e33;
+            margin-top: 2px;
+            word-break: break-word;
+        }
+
+        .value .highlight {
+            background: #f0f7ff;
+            padding: 0.1rem 0.6rem;
+            border-radius: 30px;
+            font-weight: 600;
+            color: #1e4f8a;
+        }
+
+        /* ----- NIC TABLE ----- */
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0b1e33;
+            margin: 2rem 0 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title i {
+            color: #1e4f8a;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            border-radius: 16px;
+            border: 1px solid #e9edf2;
+            background: white;
+            margin-top: 0.2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            min-width: 500px;
+        }
+
+        th {
+            text-align: left;
+            padding: 0.8rem 1rem;
+            background: #f8fafc;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            color: #1e293b;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        td {
+            padding: 0.7rem 1rem;
+            border-bottom: 1px solid #edf2f7;
+            color: #0f172a;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* ----- FOOTER ----- */
+        .footer-note {
+            margin-top: 2rem;
+            padding-top: 1.2rem;
+            border-top: 1px solid #e9edf2;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            font-size: 0.85rem;
+            color: #475569;
+        }
+
+        .footer-note i {
+            color: #1e4f8a;
+        }
+
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 700px) {
+            .card { padding: 1.5rem; }
+            .grid-2 { grid-template-columns: 1fr; gap: 0.2rem; }
+            .header { flex-direction: column; align-items: flex-start; }
+            .logo-text h1 { font-size: 1.6rem; }
+        }
+
+        .text-muted { color: #64748b; }
+        .mt-1 { margin-top: 0.4rem; }
+    </style>
+</head>
+<body>
+<div class="card">
+
+    <!-- ===== HEADER : LOGO + UDYAM BADGE ===== -->
+    <div class="header">
+        <div class="logo-area">
+            <div class="logo-icon">ME</div>
+            <div class="logo-text">
+                <h1>MAX ENTERPRISES</h1>
+                <span class="tagline"><i class="fas fa-check-circle" style="color:#1e4f8a;"></i> Udyam Registered · Micro</span>
+            </div>
+        </div>
+        <div class="badge-udyam">
+            <i class="fas fa-certificate"></i> UDYAM-BR-08-0038165
+        </div>
+    </div>
+
+    <!-- ===== MAIN DETAILS ===== -->
+    <div class="grid-2">
+        <div class="detail-item">
+            <div class="label"><i class="far fa-calendar-alt"></i> Date of Registration</div>
+            <div class="value">21/01/2026</div>
+        </div>
+        <div class="detail-item">
+            <div class="label"><i class="far fa-building"></i> Enterprise Type</div>
+            <div class="value"><span class="highlight">Micro</span> (2025-26)</div>
+        </div>
+        <div class="detail-item">
+            <div class="label"><i class="fas fa-users"></i> Social Category</div>
+            <div class="value">OBC</div>
+        </div>
+        <div class="detail-item">
+            <div class="label"><i class="far fa-calendar-plus"></i> Incorporation Date</div>
+            <div class="value">07/07/2020</div>
+        </div>
+        <div class="detail-item">
+            <div class="label"><i class="fas fa-store"></i> Business Commencement</div>
+            <div class="value">07/07/2020</div>
+        </div>
+        <div class="detail-item">
+            <div class="label"><i class="fas fa-tag"></i> Classification Year</div>
+            <div class="value">2025-26</div>
+        </div>
+        <div class="detail-item" style="grid-column: 1 / -1;">
+            <div class="label"><i class="fas fa-map-pin"></i> Official Address</div>
+            <div class="value">Max enterprises</div>
+        </div>
+    </div>
+
+    <!-- ===== NIC TABLE ===== -->
+    <div class="section-title">
+        <i class="fas fa-industry"></i> National Industry Classification (NIC)
+    </div>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>NIC 2 Digit</th>
+                    <th>NIC 4 Digit</th>
+                    <th>NIC 5 Digit</th>
+                    <th>Activity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>46</td>
+                    <td>4620</td>
+                    <td>4630</td>
+                    <td>Wholesale of fruits &amp; vegetables</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer-note">
+        <span><i class="fas fa-check-circle" style="color:#2b6b1e;"></i> Verified Udyam Registration · BR-08-0038165</span>
+        <span><i class="far fa-clock"></i> Classification Date: 21/01/2026</span>
+    </div>
+
+</div>
+</body>
+</html>
